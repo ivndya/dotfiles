@@ -7,6 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -127,7 +128,7 @@ eval "$(zoxide init zsh)"
 alias gco='git checkout'
 alias gp='git pull'
 alias gf='git fetch'
-
+alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
 
 # Автоматический запуск tmux
 if [[ -z "$TMUX" ]]; then
