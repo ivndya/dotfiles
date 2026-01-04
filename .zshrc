@@ -120,8 +120,6 @@ export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH="$HOME/.local/bin:$PATH"
-export GOOGLE_CLOUD_PROJECT="lucid-volt-479410-p1"
-export GOOGLE_CLOUD_PROJECT="lucid-volt-479410-p1"
 
 eval "$(zoxide init zsh)"
 
