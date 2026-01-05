@@ -126,7 +126,6 @@ eval "$(zoxide init zsh)"
 alias gco='git checkout'
 alias gp='git pull'
 alias gf='git fetch'
-alias ls="eza --tree --level=1 --icons=always --no-time --no-user --no-permissions"
 
 # Автоматический запуск tmux
 if [[ -z "$TMUX" ]]; then
