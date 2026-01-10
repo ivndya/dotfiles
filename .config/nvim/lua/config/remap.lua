@@ -22,7 +22,6 @@ vim.keymap.set("n", "n", "nzz", { desc = "Center cursor after checking the next 
 vim.keymap.set("n", "N", "Nzz", { desc = "Center cursor after checking the previous match" })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Concat lines inplace" })
 vim.keymap.set("n", "<leader>ce", "oif err != nil {<CR>return nil, err<CR>}<ESC>k$", { desc = "Go iferr" })
-vim.keymap.set("n", "<leader>cx", "<cmd>!go run %<CR>", { desc = "Run go code" })
 vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename" })
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>", { desc = "Quickfix Next" })
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>", { desc = "Quickfix Prev" })

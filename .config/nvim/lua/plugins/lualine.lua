@@ -34,14 +34,26 @@ return {
 				},
 			},
 		},
+
 		sections = {
 			lualine_a = { "mode" },
 			lualine_b = { "branch", "diff", "diagnostics" },
-			lualine_c = { { "filename", path = 1 } },
+
+			lualine_c = {
+				{
+					function()
+						return vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+					end,
+					icon = "",
+				},
+				{ "filename", path = 1 },
+			},
+
 			lualine_x = { "fileformat", "filetype" },
 			lualine_y = { "progress" },
 			lualine_z = { "location" },
 		},
+
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
@@ -50,6 +62,7 @@ return {
 			lualine_y = {},
 			lualine_z = {},
 		},
+
 		tabline = {},
 		winbar = {},
 		inactive_winbar = {},
