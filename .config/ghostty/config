@@ -1,0 +1,11 @@
+font-family = "JetBrainsMono Nerd Font"
+font-size=13
+font-feature = "-calt"
+font-feature = "-liga"
+font-feature = "-dlig"
+theme="Dracula"
+cursor-text = #11111b
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+window-decoration = none
