@@ -1,1 +1,2 @@
-vim.lsp.enable({ "lua_ls", "pyright", "ruff" })
+vim.lsp.enable({ "pyright", "ruff" })
+vim.lsp.enable({ "lua_ls" })
