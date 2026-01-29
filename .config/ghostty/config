@@ -1,5 +1,5 @@
 font-family = "JetBrainsMono Nerd Font"
-font-size=13
+font-size = 13
 font-feature = "-calt"
 font-feature = "-liga"
 font-feature = "-dlig"
@@ -10,5 +10,4 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 window-decoration = none
 mouse-hide-while-typing = true
-window-maximize-speed = true
-initial-window-state = maximized
+maximize = true
