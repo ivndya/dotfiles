@@ -127,6 +127,7 @@ alias gco='git checkout'
 alias gp='git pull'
 alias gf='git fetch'
 
+alias nv='nvim'
 # Автоматический запуск tmux
 if [[ -z "$TMUX" ]]; then
   tmux attach-session -t default || tmux new-session -s default
