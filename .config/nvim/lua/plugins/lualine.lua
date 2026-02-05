@@ -19,7 +19,7 @@ return {
 				statusline = 1000,
 				tabline = 1000,
 				winbar = 1000,
-				refresh_time = 16, -- ~60fps
+				refresh_time = 16,
 				events = {
 					"WinEnter",
 					"BufEnter",
@@ -37,7 +37,7 @@ return {
 
 		sections = {
 			lualine_a = { "mode" },
-			lualine_b = { "branch", "diff", "diagnostics" },
+			lualine_b = { "branch" },
 
 			lualine_c = {
 				{
@@ -46,7 +46,6 @@ return {
 					end,
 					icon = "",
 				},
-				{ "filename", path = 1 },
 			},
 
 			lualine_x = { "fileformat", "filetype" },
@@ -57,15 +56,33 @@ return {
 		inactive_sections = {
 			lualine_a = {},
 			lualine_b = {},
-			lualine_c = { "filename" },
+			lualine_c = {
+				{
+					function()
+						return vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+					end,
+					icon = "",
+				},
+			},
 			lualine_x = { "location" },
 			lualine_y = {},
 			lualine_z = {},
 		},
 
 		tabline = {},
-		winbar = {},
-		inactive_winbar = {},
+
+		winbar = {
+			lualine_c = {
+				{ "filename", path = 1 },
+			},
+		},
+
+		inactive_winbar = {
+			lualine_c = {
+				{ "filename", path = 1 },
+			},
+		},
+
 		extensions = {},
 	},
 }
