@@ -12,7 +12,11 @@ return {
 				lua = { "stylua" },
 
 				python = { "isort", "black" },
-				json = { "prettier" },
+
+				go = {
+					"goimports",
+					"gofumpt",
+				},
 			},
 		})
 

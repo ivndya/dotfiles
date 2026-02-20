@@ -132,3 +132,4 @@ alias nv='nvim'
 if [[ -z "$TMUX" ]]; then
   tmux attach-session -t default || tmux new-session -s default
 fi
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
