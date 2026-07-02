@@ -1,0 +1,75 @@
+{
+  "permissions": {
+    "defaultMode": "bypassPermissions"
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ivan/.claude/hooks/notify-stop.sh"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ivan/.claude/hooks/notify-input.sh"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ivan/.claude/hooks/watchdog-start.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ivan/.claude/hooks/shells-up.sh"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ivan/.config/tmux/agent-shells.sh 0"
+          }
+        ]
+      }
+    ],
+    "StopFailure": [
+      {
+        "matcher": "overloaded|rate_limit|server_error|authentication_failed|oauth_org_not_allowed|billing_error|invalid_request|model_not_found|max_output_tokens|unknown",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/home/ivan/.claude/hooks/notify-error.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline.sh"
+  },
+  "language": "Russian",
+  "skipDangerousModePermissionPrompt": true
+}

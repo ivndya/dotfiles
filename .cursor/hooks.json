@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hooks": {
+    "stop": [
+      {
+        "command": "/home/ivan/.cursor/hooks/notify-stop.sh",
+        "type": "command"
+      }
+    ]
+  }
+}
