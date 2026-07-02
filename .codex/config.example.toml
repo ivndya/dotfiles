@@ -1,0 +1,40 @@
+# Скопируй в ~/.codex/config.toml в WSL либо перенеси нужные секции в существующий файл.
+project_doc_fallback_filenames = ["CLAUDE.md"]
+model = "gpt-6.2-sol"
+model_reasoning_effort = "xhigh"
+service_tier = "default"
+
+[tui]
+status_line = ["project-name", "git-branch", "thread-name", "model-with-reasoning", "five-hour-limit", "weekly-limit", "context-used", "task-progress"]
+status_line_use_colors = true
+theme = "dracula"
+session_picker_view = "dense"
+
+[features]
+memories = true
+hooks = true
+
+[memories]
+use_memories = true
+generate_memories = true
+disable_on_external_context = false
+
+[mcp_servers.context7]
+url = "https://mcp.context7.com/mcp"
+
+[mcp_servers.code-index]
+command = "uvx"
+args = ["code-index-mcp"]
+enabled = false # Включи после установки uv.
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+enabled = false
+
+# Для AI Toolkit добавь рабочий URL и задай TOOLKIT_MCP_TOKEN в окружении.
+# [mcp_servers.ai-toolkit]
+# url = "https://example.com/mcp"
+# bearer_token_env_var = "TOOLKIT_MCP_TOKEN"
+#
+# [mcp_servers.ai-toolkit.tools.tracker_create_comment]
+# approval_mode = "prompt"

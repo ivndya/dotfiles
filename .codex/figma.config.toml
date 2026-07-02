@@ -1,0 +1,5 @@
+
+[mcp_servers."figma"]
+enabled = true
+url = "https://mcp.figma.com/mcp"
+disabled_tools = ["use_figma", "create_new_file", "upload_assets", "weave_run_tool", "weave_upload_asset", "weave_cancel_tool_run", "generate_figma_design", "generate_diagram", "add_code_connect_map", "send_code_connect_mappings"]

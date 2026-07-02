@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "sessionStart": [
+      {
+        "command": "bash '/Users/ivan/.cursor/herdr-agent-state.sh' session"
+      }
+    ],
+    "stop": [
+      {
+        "command": "/Users/ivan/.cursor/hooks/notify-stop.sh",
+        "type": "command"
+      }
+    ]
+  },
+  "version": 1
+}

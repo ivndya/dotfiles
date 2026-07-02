@@ -1,0 +1,4 @@
+interface:
+  display_name: "Обновить тред Pachca"
+  short_description: "Перечитать новые сообщения и обновить ответ"
+  default_prompt: "Используй $pachca-refresh, чтобы перечитать последний обсуждавшийся тред Pachca и обновить предыдущий ответ."

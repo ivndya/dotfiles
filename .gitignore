@@ -1,0 +1,65 @@
+*
+
+!.gitignore
+!.p10k.zsh
+!.zshrc
+!.config/
+!README.md
+!CLAUDE.md
+
+!.config/nvim/
+!.config/nvim/**
+.config/nvim/lazy-lock.json
+
+!.config/tmux/
+.config/tmux/plugins
+!.config/tmux/tmux.conf
+!.config/tmux/agent-alert.sh
+!.config/tmux/agent-shells.sh
+!.config/tmux/copy.sh
+
+!.config/alacritty/
+!.config/alacritty/**
+
+!.config/ghostty/
+!.config/ghostty/**
+/.config/nvim/.nvimlog
+
+# Herdr: конфиг и его зависимость для подписей панелей.
+!.config/herdr/
+!.config/herdr/config.toml
+!.config/herdr/directory-labels.py
+
+# Claude Code (секреты, история, сессии и симлинки на ai-toolkit — вне трекинга;
+# персональные скиллы-директории — трекаем поимённо)
+!.claude/
+!.claude/settings.json
+!.claude/statusline.sh
+!.claude/link-claude-skills.sh
+!.claude/skills/
+!.claude/skills/parallel/
+!.claude/skills/parallel/**
+!.claude/skills/colleague-msg/
+!.claude/skills/colleague-msg/**
+!.claude/hooks/
+!.claude/hooks/*.sh
+!.claude/hooks/*.ps1
+!.claude/rules/
+!.claude/rules/**
+
+# opencode (opencode.json содержит MCP-токены — вне трекинга; плагины трекаем)
+!.config/opencode/
+!.config/opencode/AGENTS.md
+!.config/opencode/plugin/
+!.config/opencode/plugin/**
+
+# Cursor CLI: каталог целиком в игноре (свой managed .gitignore тянет транскрипты/скиллы,
+# а mcp.json/cli-config.json содержат токены и PII). statusline.sh и хуки подсветки
+# трекаются принудительно: git add -f .cursor/statusline.sh .cursor/hooks.json .cursor/hooks/*.sh
+
+# Codex CLI: публичный шаблон и профили без секретов.
+!.codex/
+!.codex/config.example.toml
+!.codex/figma.config.toml
+!.codex/playwright.config.toml
+!.codex/playwright-headed.config.toml

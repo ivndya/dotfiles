@@ -1,0 +1,61 @@
+onboarding = false
+
+[session]
+resume_agents_on_restore = true
+
+# tmux shortcuts from ~/.config/tmux/tmux.conf; Russian layout aliases included.
+[keys]
+prefix = ["ctrl+f", "ctrl+а"]
+help = "prefix+?"
+new_tab = ["prefix+c", "prefix+с"]
+rename_tab = ["prefix+comma", "prefix+б"]
+close_tab = "prefix+ampersand"
+next_tab = ["prefix+n", "prefix+т", "prefix+ctrl+n"]
+previous_tab = ["prefix+p", "prefix+з", "prefix+ctrl+p"]
+switch_tab = ["prefix+1..9", "alt+1..9"]
+focus_pane_left = ["prefix+h", "prefix+р", "prefix+left"]
+focus_pane_down = ["prefix+j", "prefix+о", "prefix+down"]
+focus_pane_up = ["prefix+k", "prefix+л", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+д", "prefix+right"]
+split_vertical = ["prefix+v", "prefix+м", "prefix+%"]
+split_horizontal = ["prefix+'", "prefix+э", "prefix+\""]
+close_pane = ["prefix+x", "prefix+ч"]
+zoom = ["prefix+z", "prefix+я"]
+cycle_pane_next = ["prefix+o", "prefix+tab"]
+last_pane = "prefix+semicolon"
+copy_mode = ["prefix+[", "prefix+х"]
+resize_pane_left = ["prefix+ctrl+left", "prefix+alt+left"]
+resize_pane_down = ["prefix+ctrl+down", "prefix+alt+down"]
+resize_pane_up = ["prefix+ctrl+up", "prefix+alt+up"]
+resize_pane_right = ["prefix+ctrl+right", "prefix+alt+right"]
+detach = ["prefix+d", "prefix+в"]
+reload_config = ["prefix+r", "prefix+к", "prefix+shift+r"]
+workspace_picker = ["prefix+w", "prefix+ц"]
+goto = ["prefix+s", "prefix+ы", "prefix+g", "prefix+shift+t", "prefix+shift+е"]
+settings = "prefix+shift+s"
+resize_mode = "prefix+shift+e"
+open_notification_target = "prefix+shift+o"
+navigate_pane_left = ["h", "р"]
+navigate_pane_down = ["j", "о"]
+navigate_pane_up = ["k", "л"]
+navigate_pane_right = ["l", "д"]
+
+# Herdr-only actions moved away from tmux bindings: Shift+S settings, Shift+E resize mode.
+
+[theme]
+name = "dracula"
+auto_switch = false
+
+[ui]
+status_indicators = "symbols"
+
+# Refresh each pane's directory label; empty command output adds no status entry.
+tab_bar_right = [
+  { type = "command", command = "/usr/bin/python3 /Users/ivan/.config/herdr/directory-labels.py", interval_seconds = 3, timeout_seconds = 2 },
+]
+
+[ui.sidebar.agents]
+rows = [["state_icon", "machine", "$directory", "tab"], ["agent"]]
+
+[ui.toast]
+delivery = "off"
