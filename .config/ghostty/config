@@ -1,0 +1,21 @@
+font-family = "JetBrainsMono Nerd Font"
+font-size = 17
+font-feature = "-calt"
+font-feature = "-liga"
+font-feature = "-dlig"
+# Три фиксированных размера шрифта: обычный, мелкий и средний.
+keybind = super+ctrl+digit_1=set_font_size:17
+keybind = super+ctrl+digit_2=set_font_size:13
+keybind = super+ctrl+digit_3=set_font_size:16
+
+theme = "Dracula"
+cursor-text = #11111b
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
+window-decoration = auto
+macos-titlebar-style = transparent
+# Переключить рамку окна на лету: reload_config сам styleMask не пересобирает.
+keybind = super+shift+b=toggle_window_decorations
+mouse-hide-while-typing = true
+maximize = true
